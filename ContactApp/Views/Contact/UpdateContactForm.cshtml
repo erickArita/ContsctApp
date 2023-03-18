@@ -1,0 +1,9 @@
+﻿@{
+    var viewParams = new ViewDataDictionary(ViewData)
+    {
+        ["Text"] = "Actualizar",
+        ["Action"] = "Update",
+    };
+}
+
+<partial model="@Model" view-data="viewParams" name="_UpsertForm"/>

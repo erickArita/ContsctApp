@@ -1,0 +1,50 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.custom-card {
+    width: 400px;
+    box-shadow: rgb(34 173 107 / 10%) 4px 0px 20px 11px;
+    border-radius: 8px;
+    padding: 30px;
+
+    transition: .5s;
+}
+
+.custom-card:hover {
+    box-shadow: rgb(34 173 107 / 30%) 4px 0px 20px 11px;
+    transform: scale(1.05, 1.05);
+}
+
+img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+.card__ausente {
+    box-shadow: rgba(205, 196, 119, 0.17) 4px 0px 20px 11px;
+}
+
+.card__ausente:hover {
+    box-shadow: rgba(205, 196, 119, 0.17) 4px 0px 20px 11px;
+}
+
+p {
+    margin: 0;
+}

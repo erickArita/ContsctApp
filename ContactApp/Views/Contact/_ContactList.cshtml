@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Contact>
+
+
+@if (Model.Count() != 0)
+{
+    <div class="row justify-content-center justify-content-lg-start mt-3 gap-4">
+        @foreach (Contact contact in Model)
+        {
+            <div class="col-4 custom-card" style="min-width: 18rem">
+                <div class="row justify-content-center">
+                    <div class="col-3 p-0">
+                        <img src="imgs/contact.png" style="width: 80px" alt="Icono de contacto">
+                    </div>
+                </div>
+                <div class="row  justify-content-between m-0 d-block">
+                    <div class="row  m-0 gap-1 p-0 flex-nowrap">
+                        <div class="col-12">
+                            <h5 class="card-title text-center">@contact.Name</h5>
+                            <div class="col">
+                                <div class="row">
+                                    <p>
+                                        <b> Email:</b> @contact.Email
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <p> <b> Telefono</b>: @contact.Phone</p>
+                                </div>
+                                <div class="row">
+                                    <p><b>Teléfono Fijo</b>: @contact.ResidencialPhone</p>
+                                </div>
+                                <div class="row">
+                                    <p><b>Teléfono de Trabajo</b>: @contact.WorkPhone</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div >
+                    <div class="row justify-content-between m-0 mt-3">
+                        @Html.ActionLink("Editar", "Update", new { contact.Id }, new { @class = "btn btn-primary   w-25" })
+                        @Html.ActionLink("Eliminar", "Delete", new { contact.Id }, new { @class = "btn  btn-danger w-25" })
+                    </div >
+                </div >
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p class="text-center"> No hay datos para mostrar </p>
+}

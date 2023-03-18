@@ -1,0 +1,10 @@
+﻿@model Contact
+@{
+    var viewParams = new ViewDataDictionary(ViewData)
+    {
+        ["Text"] = "Crear",
+        ["Action"] = "Create",
+    };
+}
+
+<partial view-data="viewParams" name="_UpsertForm"/>

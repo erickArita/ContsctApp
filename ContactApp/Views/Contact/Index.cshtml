@@ -1,0 +1,17 @@
+﻿@model ContactsViewModel
+@{
+    ViewData["Title"] = "Contactos";
+}
+
+<div class="row">
+    <div class="col">
+        <h2>Contactos</h2>
+    </div>
+    <div class="col">
+        <div class="row justify-content-end">
+            @Html.ActionLink("Crear Contacto", "Create", "Contact", null, new { @class = "btn btn-primary", @style = "width: fit-content;" })
+        </div>
+    </div>
+</div>
+
+<partial model="@Model.Contacts" name="_ContactList"/>
