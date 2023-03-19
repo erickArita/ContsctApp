@@ -30,6 +30,7 @@ public class ContactRepository : IContactRepository
 
     public void CreateContact(Contact contact)
     {
+        contact.Id = Guid.NewGuid();
         Contacts.Add(contact);
     }
 

@@ -8,7 +8,7 @@ public class Contact
     [Required(ErrorMessage = "El nombre es requerido")]
     public String Name { get; set; }
     public String? Email { get; set; }
-    [Required(ErrorMessage = "El Teléfono es requerido")]
+    [Required(ErrorMessage = "El Teléwfono es requerido")]
     public String Phone { get; set; }
     public String?  ResidencialPhone { get; set; }
     public String?  WorkPhone { get; set; }
